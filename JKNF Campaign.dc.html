@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<link rel="stylesheet" href="responsive.css">
+<script src="./responsive.js"></script>
 <style>
   body { margin:0; background:#FAF8F3; color:#0F2A5C; font-family:'Century Gothic',Questrial,Futura,sans-serif; -webkit-font-smoothing:antialiased; }
   * { box-sizing:border-box; }
@@ -30,7 +32,7 @@
       <a href="JKNF Website v2.dc.html" style="color:#0F2A5C; display:block; line-height:0;">
         <img src="assets/jknf-logo.png" alt="Jageshwari Kanti Narayan Foundation" style="display:block; width:150px; height:auto;">
       </a>
-      <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+      <nav class="jknf-nav" style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
         <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
         <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
         <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
@@ -38,6 +40,17 @@
         <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
         <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donations</a>
       </nav>
+      <details class="jknf-menu">
+        <summary><span class="jknf-menu-icon"></span><span class="jknf-menu-open">Menu</span><span class="jknf-menu-close">Close</span></summary>
+        <nav>
+        <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
+        <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
+        <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
+        <a href="JKNF Partnerships.dc.html" style="color:#0F2A5C;">Partnerships</a>
+        <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
+        <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donations</a>
+      </nav>
+      </details>
     </div>
   </header>
 
@@ -53,7 +66,7 @@
   </section>
 
   <section data-screen-label="Campaign detail" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,40px);">
-    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(44px,5vw,80px); align-items:start;">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(44px,5vw,80px); align-items:start;">
 
       <div>
         <div style="height:260px; margin-bottom:36px; background-image:url({{ image }}); background-size:cover; background-position:center 25%; background-color:#0F2A5C;" role="img" aria-label="{{ name }}"></div>
@@ -73,7 +86,7 @@
         <div style="height:1px; margin:40px 0; background:linear-gradient(to right, rgba(15,42,92,0), rgba(15,42,92,0.12) 48px, rgba(15,42,92,0.12) calc(100% - 48px), rgba(15,42,92,0));"></div>
 
         <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">How the work is judged</div>
-        <div style="margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px;">
+        <div style="margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:28px;">
           <div>
             <h3 style="margin:0 0 8px; font-size:17px; font-weight:700;">Dignity</h3>
             <p style="margin:0; font-size:14.5px; color:rgba(15,42,92,0.82);">Residents are participants in the programme, not subjects of need.</p>
@@ -87,7 +100,7 @@
         <p style="margin:40px 0 0; font-size:12.5px; color:rgba(15,42,92,0.72);">Potential partners for this initiative are identified for outreach only; no endorsement or commitment is implied.</p>
       </div>
 
-      <form onSubmit="{{ onSubmit }}" style="border:1px solid rgba(15,42,92,0.12); padding:clamp(26px,3vw,36px); display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px 22px; align-content:start; position:sticky; top:110px;">
+      <form onSubmit="{{ onSubmit }}" style="border:1px solid rgba(15,42,92,0.12); padding:clamp(26px,3vw,36px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:24px 22px; align-content:start; position:sticky; top:110px;">
 
         <div style="grid-column:1/-1;">
           <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Donate to this initiative</div>
@@ -155,7 +168,7 @@
 
   <footer style="background:#0F2A5C; color:#FAF8F3; padding:clamp(48px,6vw,64px) clamp(20px,4vw,40px) 40px; border-top:1px solid rgba(250,248,243,0.12);">
     <div style="max-width:1180px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(36px,4vw,56px);">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:clamp(36px,4vw,56px);">
         <div>
           <div style="font-size:13.5px; letter-spacing:0.14em; text-transform:uppercase;">Jageshwari Kanti Narayan</div>
           <div style="margin-top:4px; font-size:10.5px; letter-spacing:0.28em; text-transform:uppercase; color:#C9A14A;">Foundation</div>

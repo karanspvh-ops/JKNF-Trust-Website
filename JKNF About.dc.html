@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&amp;family=Noto+Sans+Devanagari:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="responsive.css">
+<script src="./responsive.js"></script>
 <style>
   body { margin:0; background:#FAF8F3; color:#0F2A5C; font-family:'Century Gothic',Questrial,Futura,sans-serif; -webkit-font-smoothing:antialiased; }
   * { box-sizing:border-box; }
@@ -30,7 +32,7 @@
       <a href="JKNF Website v2.dc.html" style="color:#0F2A5C; display:block; line-height:0;">
         <img src="assets/jknf-logo.png" alt="Jageshwari Kanti Narayan Foundation" style="display:block; width:150px; height:auto;">
       </a>
-      <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+      <nav class="jknf-nav" style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
         <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
         <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
         <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
@@ -38,6 +40,17 @@
         <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
         <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donate</a>
       </nav>
+      <details class="jknf-menu">
+        <summary><span class="jknf-menu-icon"></span><span class="jknf-menu-open">Menu</span><span class="jknf-menu-close">Close</span></summary>
+        <nav>
+        <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
+        <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
+        <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
+        <a href="JKNF Partnerships.dc.html" style="color:#0F2A5C;">Partnerships</a>
+        <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
+        <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donate</a>
+      </nav>
+      </details>
     </div>
   </header>
 
@@ -53,7 +66,7 @@
   </section>
 
   <section data-screen-label="Legacy" style="padding:clamp(72px,8vw,112px) clamp(20px,4vw,40px);">
-    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(44px,5vw,80px); align-items:center;">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(44px,5vw,80px); align-items:center;">
       <div>
         <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">The legacy</div>
         <h2 style="margin:22px 0 0; font-size:clamp(25px,3.6vw,34px); line-height:1.26; font-weight:400;">Carried in the name of Late Shri Madhusudan Narayan.</h2>
@@ -64,7 +77,7 @@
       </div>
       <div>
         
-      <img src="./chatgpt-image-sep-11-2026-10_39_25-am-mu9wxvk0-3rsr.png" alt="The lotus mark with the line सर्वे भवन्तु सुखिनः" style="display: block; width: 419px; max-width: 420px; height: 276px; margin: 0 auto; object-fit: cover"></div>
+      <img src="./chatgpt-image-sep-11-2026-10_39_25-am-mu9wxvk0-3rsr.png" alt="The lotus mark with the line सर्वे भवन्तु सुखिनः" style="display: block; width: 100%; max-width: 420px; height: auto; aspect-ratio: 419 / 276; margin: 0 auto; object-fit: cover"></div>
     </div>
   </section>
 
@@ -205,7 +218,7 @@
 
   <section data-screen-label="Registered details" style="background:#0F2A5C; color:#FAF8F3; padding:clamp(64px,7vw,96px) clamp(20px,4vw,40px);">
     <div style="max-width:1180px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:clamp(36px,4vw,56px);">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:clamp(36px,4vw,56px);">
         <div>
           <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">Constitution</div>
           <p style="margin:16px 0 0; font-size:15px; color:rgba(250,248,243,0.82);">Public charitable trust, registered in Patna under the Indian Trust Act 1882.</p>
@@ -236,7 +249,7 @@
 
   <footer style="background:#0F2A5C; color:#FAF8F3; padding:clamp(48px,6vw,64px) clamp(20px,4vw,40px) 40px; border-top:1px solid rgba(250,248,243,0.12);">
     <div style="max-width:1180px; margin:0 auto;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(36px,4vw,56px);">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:clamp(36px,4vw,56px);">
         <div>
           <div style="font-size:13.5px; letter-spacing:0.14em; text-transform:uppercase;">Jageshwari Kanti Narayan</div>
           <div style="margin-top:4px; font-size:10.5px; letter-spacing:0.28em; text-transform:uppercase; color:#C9A14A;">Foundation</div>
