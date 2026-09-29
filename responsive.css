@@ -8,7 +8,7 @@ select, input, textarea { min-width:0; max-width:100%; }
 select { width:100%; }
 
 /* About: Board of Trustees in rows of three (two on small phones) */
-.jknf-trustees { display:grid; grid-template-columns:repeat(3, minmax(0,200px)); justify-content:center; gap:40px 28px; }
+.jknf-trustees { display:grid; grid-template-columns:repeat(3, minmax(0,230px)); justify-content:center; gap:40px 28px; }
 @media (max-width:480px) { .jknf-trustees { grid-template-columns:repeat(2, minmax(0,1fr)); gap:32px 20px; } }
 
 /* Compact menu for phones and tablets */
