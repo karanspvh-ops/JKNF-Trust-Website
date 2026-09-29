@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+  body { margin:0; background:#FAF8F3; color:#0F2A5C; font-family:'Century Gothic',Questrial,Futura,sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#9C7A2E; text-decoration:none; }
+  a:hover { color:#0F2A5C; }
+  :focus-visible { outline:2px solid #9C7A2E; outline-offset:2px; }
+  ::selection { background:rgba(201,161,74,0.28); }
+  input, select, textarea, button { font-family:inherit; }
+</style>
+</helmet>
+
+<div style="font-size:16.5px; line-height:1.65;">
+
+  <header style="position:sticky; top:0; z-index:20; background:rgba(250,248,243,0.94); backdrop-filter:blur(8px); border-bottom:1px solid rgba(15,42,92,0.12);">
+    <div style="max-width:1180px; margin:0 auto; padding:18px clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px 32px;">
+      <a href="JKNF Website v2.dc.html" style="color:#0F2A5C; display:block; line-height:0;">
+        <img src="assets/jknf-logo.png" alt="Jageshwari Kanti Narayan Foundation" style="display:block; width:150px; height:auto;">
+      </a>
+      <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+        <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
+        <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
+        <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
+        <a href="JKNF Partnerships.dc.html" style="color:#0F2A5C;">Partnerships</a>
+        <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
+        <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="Partnerships hero" style="position:relative; background:#0F2A5C; color:#FAF8F3; min-height:56vh; display:flex; align-items:flex-end; overflow:hidden;">
+    <img src="assets/group-portrait.png" alt="Beneficiaries and volunteers of the Foundation" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 35%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(15,42,92,0.95), rgba(15,42,92,0.78) 48%, rgba(15,42,92,0.4)); pointer-events:none;"></div>
+    <div style="position:relative; z-index:2; width:100%; max-width:1180px; margin:0 auto; padding:clamp(72px,10vw,120px) clamp(20px,4vw,40px) clamp(40px,5vw,60px);">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">Corporate partnerships</div>
+      <div style="height:1px; margin:22px 0 32px; max-width:520px; background:linear-gradient(to right, rgba(201,161,74,0), #C9A14A 48px, #C9A14A calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <h1 style="margin:0; max-width:860px; font-size:clamp(28px,4.6vw,48px); line-height:1.18; font-weight:700; letter-spacing:0.02em; text-wrap:pretty;">Fund one identified need, and see exactly where it went.</h1>
+      <p style="margin:24px 0 0; max-width:640px; color:rgba(250,248,243,0.82);">We work with companies, foundations and family offices on CSR commitments, in-kind supply and employee-led volunteering across ten initiatives.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Ways to partner" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Ways to partner</div>
+      <h2 style="margin:20px 0 0; font-size:clamp(25px,3.6vw,34px); line-height:1.28; font-weight:400; max-width:620px;">Four routes, all tied to a named programme.</h2>
+
+      <div style="margin-top:clamp(40px,5vw,56px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1px; background:rgba(15,42,92,0.12); border:1px solid rgba(15,42,92,0.12);">
+        <div style="background:#FAF8F3; padding:30px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;"><span style="font-size:11px; letter-spacing:0.18em; color:#9C7A2E;">01</span><span style="width:26px; height:1px; background:#C9A14A;"></span></div>
+          <h3 style="margin:0; font-size:19px; font-weight:700;">CSR funding</h3>
+          <p style="margin:0; font-size:15px; color:rgba(15,42,92,0.82);">Sponsor an initiative for a financial year, or a single drive within it, against a defined scope and budget.</p>
+        </div>
+        <div style="background:#FAF8F3; padding:30px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;"><span style="font-size:11px; letter-spacing:0.18em; color:#9C7A2E;">02</span><span style="width:26px; height:1px; background:#C9A14A;"></span></div>
+          <h3 style="margin:0; font-size:19px; font-weight:700;">In-kind supply</h3>
+          <p style="margin:0; font-size:15px; color:rgba(15,42,92,0.82);">Spectacles, assistive devices, books, uniforms, desks, medicines or provisions supplied directly to a programme.</p>
+        </div>
+        <div style="background:#FAF8F3; padding:30px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;"><span style="font-size:11px; letter-spacing:0.18em; color:#9C7A2E;">03</span><span style="width:26px; height:1px; background:#C9A14A;"></span></div>
+          <h3 style="margin:0; font-size:19px; font-weight:700;">Employee volunteering</h3>
+          <p style="margin:0; font-size:15px; color:rgba(15,42,92,0.82);">Teams join screening camps, meal distribution and school drives, with the Foundation handling logistics on the ground.</p>
+        </div>
+        <div style="background:#FAF8F3; padding:30px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;"><span style="font-size:11px; letter-spacing:0.18em; color:#9C7A2E;">04</span><span style="width:26px; height:1px; background:#C9A14A;"></span></div>
+          <h3 style="margin:0; font-size:19px; font-weight:700;">Scholarship endowment</h3>
+          <p style="margin:0; font-size:15px; color:rgba(15,42,92,0.82);">Endow annual scholarships through the Madhusudan Narayan Scholarship Circle, in your name or the Foundation's.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="How it runs" style="background:#0F2A5C; color:#FAF8F3; padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">How a partnership runs</div>
+      <div style="height:1px; margin:22px 0 clamp(40px,5vw,52px); background:linear-gradient(to right, rgba(201,161,74,0), rgba(201,161,74,0.55) 48px, rgba(201,161,74,0.55) calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr)); gap:clamp(32px,4vw,44px);">
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">01 · Scope</div>
+          <p style="margin:14px 0 0; font-size:15px; color:rgba(250,248,243,0.82);">We agree the initiative, the geography and the number of beneficiaries the commitment covers.</p>
+        </div>
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">02 · Agreement</div>
+          <p style="margin:14px 0 0; font-size:15px; color:rgba(250,248,243,0.82);">An MoU records the scope, the schedule, the reporting format and the compliance documents exchanged.</p>
+        </div>
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">03 · Delivery</div>
+          <p style="margin:14px 0 0; font-size:15px; color:rgba(250,248,243,0.82);">The drive is run by the Foundation, with your team invited to attend or take part on site.</p>
+        </div>
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">04 · Report</div>
+          <p style="margin:14px 0 0; font-size:15px; color:rgba(250,248,243,0.82);">A closing report names the specific support given, with photographs and utilisation details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Sectors" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(44px,5vw,80px);">
+      <div>
+        <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Where partners fit</div>
+        <h2 style="margin:20px 0 0; font-size:clamp(23px,3.2vw,30px); line-height:1.3; font-weight:400;">Each initiative has a natural industry alongside it.</h2>
+        <p style="margin:20px 0 0; color:rgba(15,42,92,0.82);">Optical and eyewear for Drishti; stationery and publishing for Vidya and Shiksha; mobility and assistive manufacturing for Saksham and Dignity at Home; diagnostics and pharmacy for Aarogya Sahayata; food and nutrition for Annapurna and Aashray; insurance and financial services for the Scholarship Circle; consumer care for Saath.</p>
+        <p style="margin:20px 0 0; font-size:12.5px; color:rgba(15,42,92,0.72);">Partners are identified for outreach only; no endorsement or commitment is implied by their appearance here.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:0 32px; align-content:start;">
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Drishti</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Optical</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Vidya</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Stationery</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Saksham</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Assistive devices</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Aarogya Sahayata</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Healthcare</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Aashray</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Food &amp; FMCG</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Saath</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Consumer care</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Annapurna</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Food processing</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Shiksha</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Furniture &amp; publishing</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Scholarship Circle</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Financial services</span></div>
+        <div style="padding:14px 0; border-bottom:1px solid rgba(15,42,92,0.12); display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span>Dignity at Home</span><span style="color:rgba(15,42,92,0.72); font-size:13px;">Home &amp; fittings</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="enquiry" data-screen-label="Partnership enquiry" style="padding:0 clamp(20px,4vw,40px) clamp(64px,8vw,104px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="height:1px; margin-bottom:clamp(48px,6vw,72px); background:linear-gradient(to right, rgba(15,42,92,0), rgba(15,42,92,0.12) 48px, rgba(15,42,92,0.12) calc(100% - 48px), rgba(15,42,92,0));"></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(44px,5vw,80px);">
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Partnership enquiry</div>
+          <h2 style="margin:20px 0 0; font-size:clamp(23px,3.2vw,30px); line-height:1.3; font-weight:400;">Start a conversation.</h2>
+          <p style="margin:20px 0 0; color:rgba(15,42,92,0.82);">Tell us the initiative you are drawn to and the form support would take. We will respond with a scope note and the compliance documents your team needs.</p>
+          <div style="height:1px; margin:32px 0; background:linear-gradient(to right, rgba(15,42,92,0), rgba(15,42,92,0.12) 48px, rgba(15,42,92,0.12) calc(100% - 48px), rgba(15,42,92,0));"></div>
+          <div style="display:grid; gap:12px; font-size:15px;">
+            <a href="mailto:contact@jknfoundation.org">contact@jknfoundation.org</a>
+            <div style="color:rgba(15,42,92,0.72);">Neelkanth, Brahmasthan Path, Sheikhpura, Patna 800 014</div>
+          </div>
+        </div>
+        <form onSubmit="{{ onSubmit }}" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px 22px; align-content:start;">
+          <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Company
+            <input type="text" required="true" placeholder="Organisation name" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+          </label>
+          <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Contact person
+            <input type="text" required="true" placeholder="Full name" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+          </label>
+          <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Mail ID
+            <input type="email" required="true" placeholder="name@company.com" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+          </label>
+          <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Contact No.
+            <input type="tel" required="true" placeholder="+91" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+          </label>
+          <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Initiative of interest
+            <select style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+              <option>Select an initiative</option>
+              <option>JKNF Drishti — Vision &amp; Spectacle</option>
+              <option>JKNF Vidya — Education Support</option>
+              <option>JKNF Saksham — Mobility &amp; Assistive Support</option>
+              <option>JKNF Aarogya Sahayata — Medical Assistance</option>
+              <option>JKNF Aashray — Vulnerable Children</option>
+              <option>JKNF Saath — Senior Care</option>
+              <option>JKNF Annapurna — Community Nutrition &amp; Seva</option>
+              <option>JKNF Shiksha — School Essentials &amp; Infrastructure</option>
+              <option>JKNF Scholarship Circle</option>
+              <option>JKNF Dignity at Home</option>
+              <option>General Corpus</option>
+              <option>Not decided yet</option>
+            </select>
+          </label>
+          <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Form of support
+            <select style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+              <option>Select a route</option>
+              <option>CSR funding</option>
+              <option>In-kind supply</option>
+              <option>Employee volunteering</option>
+              <option>Scholarship endowment</option>
+            </select>
+          </label>
+          <label style="grid-column:1/-1; display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Message
+            <textarea rows="4" placeholder="Scope, timeline or questions" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0; resize:vertical;"></textarea>
+          </label>
+          <div style="grid-column:1/-1; display:flex; align-items:center; flex-wrap:wrap; gap:16px;">
+            <button type="submit" style="background:transparent; color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:15px 32px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; cursor:pointer;" style-hover="background:rgba(201,161,74,0.12)">Send Enquiry</button>
+            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size:13.5px; color:#9C7A2E;">Thank you — we will respond within two working days.</span>
+            </sc-if>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0F2A5C; color:#FAF8F3; padding:clamp(48px,6vw,64px) clamp(20px,4vw,40px) 40px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(36px,4vw,56px);">
+        <div>
+          <div style="font-size:13.5px; letter-spacing:0.14em; text-transform:uppercase;">Jageshwari Kanti Narayan</div>
+          <div style="margin-top:4px; font-size:10.5px; letter-spacing:0.28em; text-transform:uppercase; color:#C9A14A;">Foundation</div>
+          <p style="margin:22px 0 0; max-width:360px; font-size:14px; color:rgba(250,248,243,0.72);">A public charitable trust registered in Patna under the Indian Trust Act 1882 · Registration No. 4/0978 of 2006 · PAN AABTJ2987J.</p>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Foundation</div>
+          <a href="JKNF About.dc.html" style="color:rgba(250,248,243,0.86);">About Us</a>
+          <a href="JKNF Website v2.dc.html#initiatives" style="color:rgba(250,248,243,0.86);">Initiatives</a>
+          <a href="JKNF Media.dc.html" style="color:rgba(250,248,243,0.86);">Media</a>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Contact</div>
+          <a href="mailto:contact@jknfoundation.org" style="color:rgba(250,248,243,0.86);">contact@jknfoundation.org</a>
+          <div style="color:rgba(250,248,243,0.72);">Patna, Bihar</div>
+        </div>
+      </div>
+      <div style="height:1px; margin:48px 0 24px; background:linear-gradient(to right, rgba(201,161,74,0), rgba(201,161,74,0.5) 48px, rgba(201,161,74,0.5) calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <div style="font-size:12.5px; color:rgba(250,248,243,0.55);">© 2026 Jageshwari Kanti Narayan Foundation. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

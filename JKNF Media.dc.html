@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+  body { margin:0; background:#FAF8F3; color:#0F2A5C; font-family:'Century Gothic',Questrial,Futura,sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#9C7A2E; text-decoration:none; }
+  a:hover { color:#0F2A5C; }
+  :focus-visible { outline:2px solid #9C7A2E; outline-offset:2px; }
+  ::selection { background:rgba(201,161,74,0.28); }
+  button { font-family:inherit; }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-size:16.5px; line-height:1.65;">
+
+  <header style="position:sticky; top:0; z-index:20; background:rgba(250,248,243,0.94); backdrop-filter:blur(8px); border-bottom:1px solid rgba(15,42,92,0.12);">
+    <div style="max-width:1180px; margin:0 auto; padding:18px clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px 32px;">
+      <a href="JKNF Website v2.dc.html" style="color:#0F2A5C; display:block; line-height:0;">
+        <img src="assets/jknf-logo.png" alt="Jageshwari Kanti Narayan Foundation" style="display:block; width:150px; height:auto;">
+      </a>
+      <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+        <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
+        <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
+        <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
+        <a href="JKNF Partnerships.dc.html" style="color:#0F2A5C;">Partnerships</a>
+        <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
+        <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="Media hero" style="background:#0F2A5C; color:#FAF8F3; padding:clamp(60px,7vw,96px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">Media</div>
+      <div style="height:1px; margin:22px 0 32px; max-width:560px; background:linear-gradient(to right, rgba(201,161,74,0), #C9A14A 48px, #C9A14A calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <h1 style="margin:0; max-width:840px; font-size:clamp(28px,4.6vw,46px); line-height:1.2; font-weight:700; letter-spacing:0.02em; text-wrap:pretty;">Albums from the ground, activity by activity.</h1>
+      <p style="margin:24px 0 0; max-width:640px; color:rgba(250,248,243,0.82);">Photographs from camps, distributions and school drives, filed under the initiative they belong to. People are shown as participants; nothing is published without consent.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Albums" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:16px 40px;">
+        <div>
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Activity albums</div>
+          <h2 style="margin:18px 0 0; font-size:clamp(25px,3.6vw,34px); line-height:1.28; font-weight:400;">Ten albums, one per initiative.</h2>
+        </div>
+        <p style="margin:0; max-width:320px; font-size:14px; color:rgba(15,42,92,0.72);">Open an album to see its frames. Empty frames are waiting on photographs from the drive.</p>
+      </div>
+
+      <div style="margin-top:clamp(40px,5vw,56px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:32px 28px;">
+        <sc-for list="{{ albums }}" as="a" hint-placeholder-count="10">
+          <button type="button" onClick="{{ a.open }}" style="text-align:left; background:transparent; border:1px solid rgba(15,42,92,0.12); padding:0; cursor:pointer; color:#0F2A5C; display:flex; flex-direction:column; min-width:0;" style-hover="border-color:#C9A14A">
+            <div style="height:210px; width:100%; overflow:hidden; background:#0F2A5C;">
+              <img src="{{ a.cover }}" alt="{{ a.name }}" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <div style="padding:24px 24px 26px; display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:11px; letter-spacing:0.18em; color:#9C7A2E;">{{ a.number }}</span>
+                <span style="width:26px; height:1px; background:#C9A14A;"></span>
+              </div>
+              <div style="font-size:19px; font-weight:700;">{{ a.name }}</div>
+              <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">{{ a.subtitle }}</div>
+              <div style="margin-top:6px; font-size:14.5px; color:rgba(15,42,92,0.82);">{{ a.blurb }}</div>
+              <div style="margin-top:10px; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#9C7A2E;">View album →</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; inset:0; z-index:60; background:rgba(11,20,42,0.82); display:flex; align-items:flex-start; justify-content:center; overflow:auto; padding:clamp(16px,4vw,56px);">
+      <div style="background:#FAF8F3; max-width:1080px; width:100%; padding:clamp(24px,4vw,44px);">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:24px;">
+          <div>
+            <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Album {{ current.number }}</div>
+            <h2 style="margin:16px 0 0; font-size:clamp(24px,3.4vw,32px); font-weight:700;">{{ current.name }}</h2>
+            <div style="margin-top:10px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">{{ current.subtitle }}</div>
+          </div>
+          <button type="button" onClick="{{ close }}" style="background:transparent; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:10px 18px; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#0F2A5C; cursor:pointer;" style-hover="border-color:#C9A14A">Close</button>
+        </div>
+
+        <div style="height:1px; margin:28px 0; background:linear-gradient(to right, #C9A14A, rgba(201,161,74,0));"></div>
+
+        <p style="margin:0; max-width:760px;">{{ current.description }}</p>
+
+        <div style="margin-top:28px; display:flex; flex-wrap:wrap; gap:10px 28px; font-size:12.5px; color:rgba(15,42,92,0.72);">
+          <span>Location: Patna, Bihar</span>
+          <span>Frames: 6</span>
+          <span>Published with the consent of those photographed</span>
+        </div>
+
+        <div style="margin-top:32px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:16px;">
+          <div style="aspect-ratio:3/2; min-width:0; overflow:hidden; background:rgba(15,42,92,0.06);">
+            <img src="{{ current.cover }}" alt="{{ current.name }}" style="width:100%; height:100%; object-fit:cover; display:block;">
+          </div>
+          <div style="aspect-ratio:3/2; min-width:0; overflow:hidden; background:rgba(15,42,92,0.06);"><image-slot id="{{ current.s2 }}" shape="rect" placeholder="Drop a photograph"></image-slot></div>
+          <div style="aspect-ratio:3/2; min-width:0; overflow:hidden; background:rgba(15,42,92,0.06);"><image-slot id="{{ current.s3 }}" shape="rect" placeholder="Drop a photograph"></image-slot></div>
+          <div style="aspect-ratio:3/2; min-width:0; overflow:hidden; background:rgba(15,42,92,0.06);"><image-slot id="{{ current.s4 }}" shape="rect" placeholder="Drop a photograph"></image-slot></div>
+          <div style="aspect-ratio:3/2; min-width:0; overflow:hidden; background:rgba(15,42,92,0.06);"><image-slot id="{{ current.s5 }}" shape="rect" placeholder="Drop a photograph"></image-slot></div>
+          <div style="aspect-ratio:3/2; min-width:0; overflow:hidden; background:rgba(15,42,92,0.06);"><image-slot id="{{ current.s6 }}" shape="rect" placeholder="Drop a photograph"></image-slot></div>
+        </div>
+
+        <div style="margin-top:32px; display:flex; flex-wrap:wrap; gap:14px;">
+          <a href="{{ current.donateHref }}" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:13px 24px; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase;">Support this initiative</a>
+          <button type="button" onClick="{{ close }}" style="background:transparent; color:rgba(15,42,92,0.72); border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:13px 24px; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; cursor:pointer;" style-hover="border-color:#C9A14A">Back to albums</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <section data-screen-label="Press" style="background:#0F2A5C; color:#FAF8F3; padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(36px,4vw,56px);">
+      <div>
+        <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">Press &amp; media enquiries</div>
+        <h2 style="margin:18px 0 0; font-size:clamp(24px,3.4vw,32px); font-weight:400;">For photographs, interviews or coverage.</h2>
+      </div>
+      <div style="display:grid; gap:14px; align-content:center; font-size:15px;">
+        <a href="mailto:contact@jknfoundation.org" style="color:rgba(250,248,243,0.86);">contact@jknfoundation.org</a>
+        <div style="color:rgba(250,248,243,0.72);">Neelkanth, Brahmasthan Path, Sheikhpura, Patna 800 014</div>
+        <div style="color:rgba(250,248,243,0.72);">High-resolution files are issued on request, with usage terms.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0F2A5C; color:#FAF8F3; padding:clamp(48px,6vw,64px) clamp(20px,4vw,40px) 40px; border-top:1px solid rgba(250,248,243,0.12);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(36px,4vw,56px);">
+        <div>
+          <div style="font-size:13.5px; letter-spacing:0.14em; text-transform:uppercase;">Jageshwari Kanti Narayan</div>
+          <div style="margin-top:4px; font-size:10.5px; letter-spacing:0.28em; text-transform:uppercase; color:#C9A14A;">Foundation</div>
+          <p style="margin:22px 0 0; max-width:360px; font-size:14px; color:rgba(250,248,243,0.72);">A public charitable trust registered in Patna under the Indian Trust Act 1882 · Registration No. 4/0978 of 2006 · PAN AABTJ2987J.</p>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Foundation</div>
+          <a href="JKNF About.dc.html" style="color:rgba(250,248,243,0.86);">About Us</a>
+          <a href="JKNF Partnerships.dc.html" style="color:rgba(250,248,243,0.86);">Partnerships</a>
+          <a href="JKNF Donations.dc.html" style="color:rgba(250,248,243,0.86);">Donations</a>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Contact</div>
+          <a href="mailto:contact@jknfoundation.org" style="color:rgba(250,248,243,0.86);">contact@jknfoundation.org</a>
+          <div style="color:rgba(250,248,243,0.72);">Patna, Bihar</div>
+        </div>
+      </div>
+      <div style="height:1px; margin:48px 0 24px; background:linear-gradient(to right, rgba(201,161,74,0), rgba(201,161,74,0.5) 48px, rgba(201,161,74,0.5) calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <div style="font-size:12.5px; color:rgba(250,248,243,0.55);">© 2026 Jageshwari Kanti Narayan Foundation. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ALBUMS = [
+  { slug:'drishti', number:'01', name:'JKNF Drishti', subtitle:'Vision & spectacle initiative',
+    blurb:'Screening camps and spectacle distribution.',
+    description:'Eye-screening and vision-check camps held for underserved communities, with spectacles issued on site to those who need them and referrals made for further treatment.' },
+  { slug:'vidya', number:'02', name:'JKNF Vidya', subtitle:'Education support initiative',
+    blurb:'Fees, books and uniforms handed over.',
+    description:'Direct educational assistance to deserving students — school and college fees, books, uniforms and examination expenses, handed over to the family or the institution.' },
+  { slug:'saksham', number:'03', name:'JKNF Saksham', subtitle:'Mobility & assistive support',
+    blurb:'Fittings and device distribution.',
+    description:'Artificial limbs, wheelchairs, crutches and tricycles fitted and handed over, with follow-up support after the fitting.' },
+  { slug:'aarogya', number:'04', name:'JKNF Aarogya Sahayata', subtitle:'Medical assistance programme',
+    blurb:'Hospital visits and treatment support.',
+    description:'Support for families facing serious medical conditions — treatment, diagnostics, medicines and hospital expenses.' },
+  { slug:'aashray', number:'05', name:'JKNF Aashray', subtitle:'Vulnerable children support',
+    blurb:'School drives for children in care.',
+    description:'Education, nutrition, fees, books and uniforms for vulnerable and orphaned children, so schooling continues whatever changes at home.' },
+  { slug:'saath', number:'06', name:'JKNF Saath', subtitle:'Senior care support initiative',
+    blurb:'Visits to care homes across Patna.',
+    description:'Nutrition, medicines, healthcare assistance and personal-care supplies for senior citizens living in care homes.' },
+  { slug:'annapurna', number:'07', name:'JKNF Annapurna', subtitle:'Community nutrition & seva',
+    blurb:'Meals cooked, served and distributed.',
+    description:'Nutritious meals and essential-food distribution for underserved communities, run with volunteers alongside the Foundation team.' },
+  { slug:'shiksha', number:'08', name:'JKNF Shiksha', subtitle:'School essentials & infrastructure',
+    blurb:'Desks, benches and classroom supply.',
+    description:'One clearly identified need met at a school — desks, benches, books, learning materials or classroom equipment.' },
+  { slug:'scholarship', number:'09', name:'JKNF Scholarship Circle', subtitle:'Madhusudan Narayan scholarship',
+    blurb:'Scholars and award ceremonies.',
+    description:'Annual scholarship support for deserving students from financially disadvantaged backgrounds, awarded in the founder’s name.' },
+  { slug:'dignity', number:'10', name:'JKNF Dignity at Home', subtitle:'Independent living support',
+    blurb:'Home visits and equipment set-up.',
+    description:'Mobility equipment, assistive devices and practical modifications that help persons with disabilities live independently at home.' }
+];
+
+class Component extends DCLogic {
+  state = { open: null };
+  renderVals() {
+    const cur = ALBUMS.find(a => a.slug === this.state.open) || null;
+    return {
+      albums: ALBUMS.map(a => ({
+        number: a.number, name: a.name, subtitle: a.subtitle, blurb: a.blurb,
+        cover: 'assets/init-' + a.slug + '.png',
+        open: () => this.setState({ open: a.slug })
+      })),
+      isOpen: !!cur,
+      current: cur ? {
+        number: cur.number, name: cur.name, subtitle: cur.subtitle, description: cur.description,
+        cover: 'assets/init-' + cur.slug + '.png',
+        s2: 'album-' + cur.slug + '-2', s3: 'album-' + cur.slug + '-3',
+        s4: 'album-' + cur.slug + '-4', s5: 'album-' + cur.slug + '-5', s6: 'album-' + cur.slug + '-6',
+        donateHref: 'JKNF Campaign.dc.html?i=' + cur.slug
+      } : {},
+      close: () => this.setState({ open: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

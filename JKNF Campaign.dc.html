@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+  body { margin:0; background:#FAF8F3; color:#0F2A5C; font-family:'Century Gothic',Questrial,Futura,sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#9C7A2E; text-decoration:none; }
+  a:hover { color:#0F2A5C; }
+  :focus-visible { outline:2px solid #9C7A2E; outline-offset:2px; }
+  ::selection { background:rgba(201,161,74,0.28); }
+  input, select, textarea, button { font-family:inherit; }
+</style>
+</helmet>
+
+<div style="font-size:16.5px; line-height:1.65;">
+
+  <header style="position:sticky; top:0; z-index:20; background:rgba(250,248,243,0.94); backdrop-filter:blur(8px); border-bottom:1px solid rgba(15,42,92,0.12);">
+    <div style="max-width:1180px; margin:0 auto; padding:18px clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px 32px;">
+      <a href="JKNF Website v2.dc.html" style="color:#0F2A5C; display:block; line-height:0;">
+        <img src="assets/jknf-logo.png" alt="Jageshwari Kanti Narayan Foundation" style="display:block; width:150px; height:auto;">
+      </a>
+      <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+        <a href="JKNF About.dc.html" style="color:#0F2A5C;">About Us</a>
+        <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
+        <a href="JKNF Media.dc.html" style="color:#0F2A5C;">Media</a>
+        <a href="JKNF Partnerships.dc.html" style="color:#0F2A5C;">Partnerships</a>
+        <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
+        <a href="JKNF Donations.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donations</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="Campaign hero" style="position:relative; background:#0F2A5C; color:#FAF8F3; min-height:58vh; display:flex; align-items:flex-end; overflow:hidden;">
+    <img src="assets/group-portrait.png" alt="Beneficiaries and volunteers of the Foundation" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 35%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(15,42,92,0.95), rgba(15,42,92,0.78) 48%, rgba(15,42,92,0.4)); pointer-events:none;"></div>
+    <div style="position:relative; z-index:2; width:100%; max-width:1180px; margin:0 auto; padding:clamp(72px,10vw,120px) clamp(20px,4vw,40px) clamp(40px,5vw,60px);">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.65);"><a href="JKNF Donations.dc.html" style="color:rgba(250,248,243,0.65);">Donations</a> · Initiative {{ number }}</div>
+      <div style="height:1px; margin:20px 0 30px; max-width:520px; background:linear-gradient(to right, rgba(201,161,74,0), #C9A14A 48px, #C9A14A calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <h1 style="margin:0; max-width:860px; font-size:clamp(30px,5vw,50px); line-height:1.16; font-weight:700; letter-spacing:0.02em; text-wrap:pretty;">{{ name }}</h1>
+      <p style="margin:18px 0 0; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#C9A14A;">{{ subtitle }}</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Campaign detail" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(44px,5vw,80px); align-items:start;">
+
+      <div>
+        <div style="height:260px; margin-bottom:36px; background-image:url({{ image }}); background-size:cover; background-position:center 25%; background-color:#0F2A5C;" role="img" aria-label="{{ name }}"></div>
+        <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">The need</div>
+        <h2 style="margin:20px 0 0; font-size:clamp(23px,3.2vw,30px); line-height:1.3; font-weight:400;">{{ tagline }}</h2>
+        <p style="margin:22px 0 0;">{{ description }}</p>
+
+        <div style="height:1px; margin:40px 0; background:linear-gradient(to right, rgba(15,42,92,0), rgba(15,42,92,0.12) 48px, rgba(15,42,92,0.12) calc(100% - 48px), rgba(15,42,92,0));"></div>
+
+        <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">What your contribution supports</div>
+        <ul style="margin:24px 0 0; padding:0; list-style:none; display:grid; gap:16px;">
+          <sc-for list="{{ bullets }}" as="b" hint-placeholder-count="4">
+            <li style="padding-left:20px; border-left:1px solid rgba(201,161,74,0.6); font-size:15px;">{{ b }}</li>
+          </sc-for>
+        </ul>
+
+        <div style="height:1px; margin:40px 0; background:linear-gradient(to right, rgba(15,42,92,0), rgba(15,42,92,0.12) 48px, rgba(15,42,92,0.12) calc(100% - 48px), rgba(15,42,92,0));"></div>
+
+        <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">How the work is judged</div>
+        <div style="margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:28px;">
+          <div>
+            <h3 style="margin:0 0 8px; font-size:17px; font-weight:700;">Dignity</h3>
+            <p style="margin:0; font-size:14.5px; color:rgba(15,42,92,0.82);">Residents are participants in the programme, not subjects of need.</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px; font-size:17px; font-weight:700;">Need-based</h3>
+            <p style="margin:0; font-size:14.5px; color:rgba(15,42,92,0.82);">Every contribution names the specific support it provided.</p>
+          </div>
+        </div>
+
+        <p style="margin:40px 0 0; font-size:12.5px; color:rgba(15,42,92,0.72);">Potential partners for this initiative are identified for outreach only; no endorsement or commitment is implied.</p>
+      </div>
+
+      <form onSubmit="{{ onSubmit }}" style="border:1px solid rgba(15,42,92,0.12); padding:clamp(26px,3vw,36px); display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px 22px; align-content:start; position:sticky; top:110px;">
+
+        <div style="grid-column:1/-1;">
+          <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Donate to this initiative</div>
+          <h2 style="margin:14px 0 0; font-size:23px; font-weight:700;">{{ name }}</h2>
+        </div>
+
+        <label style="grid-column:1/-1; display:grid; gap:10px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Donation Amount (₹)
+          <input type="number" min="1" required="true" value="{{ amount }}" onChange="{{ onAmount }}" placeholder="0" style="font-size:24px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:8px 0;">
+        </label>
+
+        <div style="grid-column:1/-1; display:flex; flex-wrap:wrap; gap:10px; margin-top:-10px;">
+          <button type="button" onClick="{{ setA }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹1,000</button>
+          <button type="button" onClick="{{ setB }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹2,500</button>
+          <button type="button" onClick="{{ setC }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹5,000</button>
+          <button type="button" onClick="{{ setD }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹10,000</button>
+        </div>
+
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Name
+          <input type="text" required="true" placeholder="Full name" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Mail ID
+          <input type="email" required="true" placeholder="name@example.com" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+        <label style="grid-column:1/-1; display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Address
+          <textarea rows="2" required="true" placeholder="Street, city, state, PIN" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0; resize:vertical;"></textarea>
+        </label>
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Contact No.
+          <input type="tel" required="true" placeholder="+91" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">PAN Number
+          <input type="text" placeholder="ABCDE1234F" style="font-size:15px; letter-spacing:0.06em; text-transform:uppercase; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+
+        <div style="grid-column:1/-1; margin-top:6px; display:flex; align-items:center; flex-wrap:wrap; gap:16px;">
+          <button type="submit" style="background:transparent; color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:15px 32px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; cursor:pointer;" style-hover="background:rgba(201,161,74,0.12)">Donate Now</button>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:13.5px; color:#9C7A2E;">Thank you — a receipt will be sent to your email.</span>
+          </sc-if>
+        </div>
+
+        <p style="grid-column:1/-1; margin:6px 0 0; font-size:12px; color:rgba(15,42,92,0.72);">Donations are received by Jageshwari Kanti Narayan Foundation · Reg. No. 4/0978 of 2006 · PAN AABTJ2987J.</p>
+      </form>
+
+    </div>
+  </section>
+
+  <section data-screen-label="Other initiatives" style="background:#0F2A5C; color:#FAF8F3; padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">Other initiatives</div>
+      <h2 style="margin:18px 0 0; font-size:clamp(24px,3.4vw,32px); font-weight:400;">Nine more needs to meet.</h2>
+      <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:24px;">
+        <sc-for list="{{ others }}" as="o" hint-placeholder-count="3">
+          <a href="{{ o.href }}" style="color:#FAF8F3; border:1px solid rgba(250,248,243,0.18); padding:22px 20px; display:grid; gap:8px;" style-hover="border-color:#C9A14A">
+            <span style="font-size:11px; letter-spacing:0.18em; color:#C9A14A;">{{ o.number }}</span>
+            <span style="font-size:18px;">{{ o.name }}</span>
+            <span style="font-size:13px; color:rgba(250,248,243,0.72);">{{ o.subtitle }}</span>
+          </a>
+        </sc-for>
+        <a href="JKNF Donations.dc.html" style="color:#FAF8F3; border:1px solid #C9A14A; padding:22px 20px; display:grid; gap:8px; align-content:center;" style-hover="background:rgba(201,161,74,0.12)">
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase;">View all ten →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0F2A5C; color:#FAF8F3; padding:clamp(48px,6vw,64px) clamp(20px,4vw,40px) 40px; border-top:1px solid rgba(250,248,243,0.12);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(36px,4vw,56px);">
+        <div>
+          <div style="font-size:13.5px; letter-spacing:0.14em; text-transform:uppercase;">Jageshwari Kanti Narayan</div>
+          <div style="margin-top:4px; font-size:10.5px; letter-spacing:0.28em; text-transform:uppercase; color:#C9A14A;">Foundation</div>
+          <p style="margin:22px 0 0; max-width:360px; font-size:14px; color:rgba(250,248,243,0.72);">A public charitable trust registered in Patna under the Indian Trust Act 1882 · Registration No. 4/0978 of 2006 · PAN AABTJ2987J.</p>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Foundation</div>
+          <a href="JKNF About.dc.html" style="color:rgba(250,248,243,0.86);">About Us</a>
+          <a href="JKNF Donations.dc.html" style="color:rgba(250,248,243,0.86);">Donations</a>
+          <a href="JKNF Website v2.dc.html#centenary" style="color:rgba(250,248,243,0.86);">Centenary</a>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Contact</div>
+          <a href="mailto:contact@jknfoundation.org" style="color:rgba(250,248,243,0.86);">contact@jknfoundation.org</a>
+          <div style="color:rgba(250,248,243,0.72);">Patna, Bihar</div>
+        </div>
+      </div>
+      <div style="height:1px; margin:48px 0 24px; background:linear-gradient(to right, rgba(201,161,74,0), rgba(201,161,74,0.5) 48px, rgba(201,161,74,0.5) calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <div style="font-size:12.5px; color:rgba(250,248,243,0.55);">© 2026 Jageshwari Kanti Narayan Foundation. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const INITIATIVES = [
+  { slug:'drishti', number:'01', name:'JKNF Drishti', subtitle:'Vision & Spectacle Initiative',
+    tagline:'Sight restored, one camp at a time.',
+    description:'Conduct eye-screening and vision-check camps for underserved communities, with spectacles provided to beneficiaries who require them and referrals for further treatment where necessary.',
+    bullets:['Eye-screening and vision-check camps in underserved localities.','Spectacles for beneficiaries who require them.','Referrals for further treatment where necessary.','Camp logistics, equipment and volunteer support.'] },
+  { slug:'vidya', number:'02', name:'JKNF Vidya', subtitle:'Education Support Initiative',
+    tagline:'Keeping a student in school.',
+    description:'Provide direct educational assistance to deserving students, including school/college fees, books, uniforms, examination expenses and other essential educational requirements.',
+    bullets:['School and college fees for deserving students.','Books and learning materials.','Uniforms and daily school essentials.','Examination expenses and other essential requirements.'] },
+  { slug:'saksham', number:'03', name:'JKNF Saksham', subtitle:'Mobility & Assistive Support Initiative',
+    tagline:'Independence, restored by the right device.',
+    description:'Support persons with disabilities through artificial limbs, wheelchairs, crutches, tricycles and other mobility or assistive devices that improve independence and dignity.',
+    bullets:['Artificial limbs and their fitting.','Wheelchairs, crutches and tricycles.','Other mobility and assistive devices.','Follow-up support after fitting.'] },
+  { slug:'aarogya', number:'04', name:'JKNF Aarogya Sahayata', subtitle:'Medical Assistance Programme',
+    tagline:'Treatment that a family cannot carry alone.',
+    description:'Provide financial assistance to individuals from economically weaker backgrounds facing serious medical conditions, supporting treatment, diagnostics, medicines or hospital expenses.',
+    bullets:['Treatment costs for serious medical conditions.','Diagnostics and investigations.','Prescribed medicines.','Hospital expenses for families from weaker backgrounds.'] },
+  { slug:'aashray', number:'05', name:'JKNF Aashray', subtitle:'Vulnerable Children Support Programme',
+    tagline:'Schooling that continues, whatever changes at home.',
+    description:'Support vulnerable and orphaned children with education, nutrition, school fees, books, uniforms and other essential requirements to help them continue their education and live with dignity.',
+    bullets:['School fees for vulnerable and orphaned children.','Nutrition and daily essentials.','Books and uniforms.','Support to continue education without interruption.'] },
+  { slug:'saath', number:'06', name:'JKNF Saath', subtitle:'Senior Care Support Initiative',
+    tagline:'Care that does not stop at the basics.',
+    description:'Support senior citizens living in care homes through nutrition, medicines, healthcare assistance, personal-care supplies and other basic necessities.',
+    bullets:['Nutrition — regular, appropriate meals for residents of care homes.','Medicines — prescribed and ongoing requirements.','Healthcare assistance — check-ups, consultations and follow-up care.','Personal-care supplies and other basic necessities.'] },
+  { slug:'annapurna', number:'07', name:'JKNF Annapurna', subtitle:'Community Nutrition & Seva Initiative',
+    tagline:'A meal served, by hand, in person.',
+    description:'Organise nutritious meal and essential-food distribution initiatives for underserved communities, combining direct relief with volunteer-led community service.',
+    bullets:['Nutritious meals prepared and served on site.','Essential-food distribution to households in need.','Volunteer-led community service at each drive.','Provisions, transport and serving logistics.'] },
+  { slug:'shiksha', number:'08', name:'JKNF Shiksha', subtitle:'School Essentials & Infrastructure Initiative',
+    tagline:'One identified need at one school.',
+    description:'Address one clearly identified need at a school or educational institution—such as desks, benches, books, learning materials or classroom equipment—through direct sponsorship or in-kind support.',
+    bullets:['Desks and benches for classrooms.','Books and learning materials.','Classroom equipment.','Direct sponsorship or in-kind support for a named need.'] },
+  { slug:'scholarship', number:'09', name:'JKNF Scholarship Circle', subtitle:'Madhusudan Narayan Scholarship Programme',
+    tagline:'An annual scholarship, carried in a name.',
+    description:'Create a focused scholarship programme for deserving students from financially disadvantaged backgrounds, providing meaningful annual educational support and potentially developing into JKNF’s signature education initiative.',
+    bullets:['Annual scholarship support for a named student.','Selection focused on financially disadvantaged backgrounds.','Meaningful, continuing educational assistance.','The Foundation’s signature education initiative in the making.'] },
+  { slug:'dignity', number:'10', name:'JKNF Dignity at Home', subtitle:'Independent Living Support',
+    tagline:'Living at home, with less standing in the way.',
+    description:'Help persons with disabilities live more independently by supporting mobility equipment, essential assistive devices and practical modifications or support required at home.',
+    bullets:['Mobility equipment for use at home.','Essential assistive devices.','Practical modifications to the home.','Ongoing support required for independent living.'] }
+];
+
+class Component extends DCLogic {
+  state = { sent: false, amount: '' };
+  renderVals() {
+    const set = (v) => () => this.setState({ amount: String(v) });
+    let slug = 'saath';
+    try { slug = new URLSearchParams(location.search).get('i') || 'saath'; } catch (e) {}
+    const idx = Math.max(0, INITIATIVES.findIndex(x => x.slug === slug));
+    const it = INITIATIVES[idx];
+    const others = [1, 2, 3].map(k => {
+      const o = INITIATIVES[(idx + k * 3) % INITIATIVES.length];
+      return { number: o.number, name: o.name, subtitle: o.subtitle, href: 'JKNF Campaign.dc.html?i=' + o.slug };
+    });
+    return {
+      number: it.number, name: it.name, subtitle: it.subtitle, tagline: it.tagline,
+      description: it.description, bullets: it.bullets, image: 'assets/init-' + it.slug + '.png',
+      others,
+      sent: this.state.sent,
+      amount: this.state.amount,
+      onAmount: (e) => this.setState({ amount: e.target.value }),
+      setA: set(1000), setB: set(2500), setC: set(5000), setD: set(10000),
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

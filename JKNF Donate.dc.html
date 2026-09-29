@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Questrial&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+  body { margin:0; background:#FAF8F3; color:#0F2A5C; font-family:'Century Gothic',Questrial,Futura,sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#9C7A2E; text-decoration:none; }
+  a:hover { color:#0F2A5C; }
+  :focus-visible { outline:2px solid #9C7A2E; outline-offset:2px; }
+  ::selection { background:rgba(201,161,74,0.28); }
+  input, select, textarea, button { font-family:inherit; }
+</style>
+</helmet>
+
+<div style="font-size:16.5px; line-height:1.65;">
+
+  <header style="position:sticky; top:0; z-index:20; background:rgba(250,248,243,0.94); backdrop-filter:blur(8px); border-bottom:1px solid rgba(15,42,92,0.12);">
+    <div style="max-width:1180px; margin:0 auto; padding:18px clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px 32px;">
+      <a href="JKNF Website v2.dc.html" style="color:#0F2A5C; display:block; line-height:0;">
+        <img src="assets/jknf-logo.png" alt="Jageshwari Kanti Narayan Foundation" style="display:block; width:150px; height:auto;">
+      </a>
+      <nav style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+        <a href="JKNF Website v2.dc.html#foundation" style="color:#0F2A5C;">The Foundation</a>
+        <a href="JKNF Website v2.dc.html#initiatives" style="color:#0F2A5C;">Initiatives</a>
+        <a href="JKNF Website v2.dc.html#centenary" style="color:#0F2A5C;">Centenary</a>
+        <a href="JKNF Website v2.dc.html#contact" style="color:#0F2A5C;">Contact</a>
+        <a href="JKNF Donate.dc.html" style="color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:9px 18px;">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="Donate hero" style="background:#0F2A5C; color:#FAF8F3; padding:clamp(60px,7vw,92px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C9A14A;">Make a donation</div>
+      <div style="height:1px; margin:22px 0 32px; max-width:560px; background:linear-gradient(to right, rgba(201,161,74,0), #C9A14A 48px, #C9A14A calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <h1 style="margin:0; max-width:760px; font-size:clamp(28px,4.6vw,46px); line-height:1.2; font-weight:700; letter-spacing:0.02em; text-wrap:pretty;">Give to one clearly identified need.</h1>
+      <p style="margin:24px 0 0; max-width:620px; color:rgba(250,248,243,0.82);">Choose the initiative your contribution should support. Every donation is directed to the programme you name.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Donation form" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,40px);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(44px,5vw,80px);">
+
+      <div>
+        <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9C7A2E;">Before you give</div>
+        <h2 style="margin:20px 0 0; font-size:clamp(23px,3.2vw,30px); line-height:1.3; font-weight:400;">Where your donation goes.</h2>
+        <p style="margin:20px 0 0; font-size:15px; color:rgba(15,42,92,0.82);">Donations are received by Jageshwari Kanti Narayan Foundation, a public charitable trust registered in Patna under the Indian Trust Act 1882.</p>
+        <div style="height:1px; margin:32px 0; background:linear-gradient(to right, rgba(15,42,92,0), rgba(15,42,92,0.12) 48px, rgba(15,42,92,0.12) calc(100% - 48px), rgba(15,42,92,0));"></div>
+        <div style="display:grid; gap:16px; font-size:14px; color:rgba(15,42,92,0.72);">
+          <div>Registration No. 4/0978 of 2006</div>
+          <div>PAN AABTJ2987J</div>
+          <div>Neelkanth, Brahmasthan Path, Sheikhpura, Patna 800 014</div>
+          <a href="mailto:contact@jknfoundation.org">contact@jknfoundation.org</a>
+        </div>
+        <p style="margin:32px 0 0; font-size:12.5px; color:rgba(15,42,92,0.72);">PAN is collected for donation receipts and tax records. Details are used only for processing and acknowledging your contribution.</p>
+      </div>
+
+      <form onSubmit="{{ onSubmit }}" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:26px 24px; align-content:start;">
+
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Name
+          <input type="text" required="true" placeholder="Full name" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Mail ID
+          <input type="email" required="true" placeholder="name@example.com" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+
+        <label style="grid-column:1/-1; display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Address
+          <textarea rows="2" required="true" placeholder="Street, city, state, PIN" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0; resize:vertical;"></textarea>
+        </label>
+
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Contact No.
+          <input type="tel" required="true" placeholder="+91" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+
+        <label style="display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">PAN Number
+          <input type="text" placeholder="ABCDE1234F" style="font-size:15px; letter-spacing:0.06em; text-transform:uppercase; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+
+        <label style="grid-column:1/-1; display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Donation for
+          <select required="true" style="font-size:15px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+            <option value="">Select an initiative</option>
+            <option>JKNF Drishti — Vision &amp; Spectacle Initiative</option>
+            <option>JKNF Vidya — Education Support Initiative</option>
+            <option>JKNF Saksham — Mobility &amp; Assistive Support Initiative</option>
+            <option>JKNF Aarogya Sahayata — Medical Assistance Programme</option>
+            <option>JKNF Aashray — Vulnerable Children Support Programme</option>
+            <option>JKNF Saath — Senior Care Support Initiative</option>
+            <option>JKNF Annapurna — Community Nutrition &amp; Seva Initiative</option>
+            <option>JKNF Shiksha — School Essentials &amp; Infrastructure Initiative</option>
+            <option>JKNF Scholarship Circle — Madhusudan Narayan Scholarship</option>
+            <option>JKNF Dignity at Home — Independent Living Support</option>
+            <option>General Corpus</option>
+            <option>Where the need is greatest</option>
+          </select>
+        </label>
+
+        <label style="grid-column:1/-1; display:grid; gap:8px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(15,42,92,0.72);">Donation Amount (₹)
+          <input type="number" min="1" required="true" value="{{ amount }}" onChange="{{ onAmount }}" placeholder="0" style="font-size:22px; letter-spacing:0; text-transform:none; color:#0F2A5C; background:transparent; border:0; border-bottom:1px solid rgba(15,42,92,0.12); padding:10px 0;">
+        </label>
+
+        <sc-if value="{{ showPresets }}" hint-placeholder-val="{{ true }}">
+          <div style="grid-column:1/-1; display:flex; flex-wrap:wrap; gap:10px; margin-top:-8px;">
+            <button type="button" onClick="{{ setA }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹1,000</button>
+            <button type="button" onClick="{{ setB }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹2,500</button>
+            <button type="button" onClick="{{ setC }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹5,000</button>
+            <button type="button" onClick="{{ setD }}" style="background:transparent; color:#0F2A5C; border:1px solid rgba(15,42,92,0.12); border-radius:2px; padding:9px 16px; font-size:13px; cursor:pointer;" style-hover="border-color:#C9A14A">₹10,000</button>
+          </div>
+        </sc-if>
+
+        <div style="grid-column:1/-1; margin-top:8px; display:flex; align-items:center; flex-wrap:wrap; gap:18px;">
+          <button type="submit" style="background:transparent; color:#0F2A5C; border:1px solid #C9A14A; border-radius:2px; padding:15px 34px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; cursor:pointer;" style-hover="background:rgba(201,161,74,0.12)">Donate Now</button>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:13.5px; color:#9C7A2E;">Thank you. A receipt will be sent to your email.</span>
+          </sc-if>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <footer style="background:#0F2A5C; color:#FAF8F3; padding:clamp(48px,6vw,64px) clamp(20px,4vw,40px) 40px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(36px,4vw,56px);">
+        <div>
+          <div style="font-size:13.5px; letter-spacing:0.14em; text-transform:uppercase;">Jageshwari Kanti Narayan</div>
+          <div style="margin-top:4px; font-size:10.5px; letter-spacing:0.28em; text-transform:uppercase; color:#C9A14A;">Foundation</div>
+          <p style="margin:22px 0 0; max-width:360px; font-size:14px; color:rgba(250,248,243,0.72);">A public charitable trust registered in Patna under the Indian Trust Act 1882 · Registration No. 4/0978 of 2006 · PAN AABTJ2987J.</p>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Foundation</div>
+          <a href="JKNF Website v2.dc.html#foundation" style="color:rgba(250,248,243,0.86);">About</a>
+          <a href="JKNF Website v2.dc.html#initiatives" style="color:rgba(250,248,243,0.86);">Initiatives</a>
+          <a href="JKNF Website v2.dc.html#centenary" style="color:rgba(250,248,243,0.86);">Centenary</a>
+        </div>
+        <div style="display:grid; gap:12px; align-content:start; font-size:14px;">
+          <div style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,243,0.55);">Contact</div>
+          <a href="mailto:contact@jknfoundation.org" style="color:rgba(250,248,243,0.86);">contact@jknfoundation.org</a>
+          <div style="color:rgba(250,248,243,0.72);">Patna, Bihar</div>
+        </div>
+      </div>
+      <div style="height:1px; margin:48px 0 24px; background:linear-gradient(to right, rgba(201,161,74,0), rgba(201,161,74,0.5) 48px, rgba(201,161,74,0.5) calc(100% - 48px), rgba(201,161,74,0));"></div>
+      <div style="font-size:12.5px; color:rgba(250,248,243,0.55);">© 2026 Jageshwari Kanti Narayan Foundation. All rights reserved.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showPresets&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, amount: '' };
+  renderVals() {
+    const set = (v) => () => this.setState({ amount: String(v) });
+    return {
+      sent: this.state.sent,
+      amount: this.state.amount,
+      showPresets: this.props.showPresets ?? true,
+      onAmount: (e) => this.setState({ amount: e.target.value }),
+      setA: set(1000), setB: set(2500), setC: set(5000), setD: set(10000),
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
